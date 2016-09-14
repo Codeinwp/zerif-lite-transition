@@ -8,8 +8,8 @@
  * @copyright 2016 Vertigo Studio SRL
  */
 /*
- * Plugin Name: Zerif Update Fix
- * Description: Fix your zerif lite update
+ * Plugin Name: Zerif Lite Transition
+ * Description: This plugin is the simple way to get access to Zerif Lite theme updates. The plugin will automatically install the newest version of Zerif Lite theme, so you can get access to updates and safety fixes. It also works with Zerif Lite Child themes, keeping your custom settings untouched.
  * Version: 1.0.0
  *
  *
