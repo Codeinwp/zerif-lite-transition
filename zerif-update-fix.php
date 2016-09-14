@@ -17,9 +17,14 @@
 function zerif_update_fix_load() {
 	$theme = wp_get_theme();
 	if ( strtolower( $theme->get( 'Name' ) ) == 'zerif lite' || $theme->get_template() == 'zerif-lite' ) {
-		if ( version_compare( $theme->get( "Version" ), '1.8.5.0' ) == - 1 ) {
+		$version = $theme->get( 'Version' );
+		if ( is_child_theme() ) {
+			$theme   = wp_get_theme( $theme->get_template() );
+			$version = $theme->get( 'Version' );
+		}
+		if ( version_compare( $version, '1.8.5.0' ) == - 1 ) {
 			require 'license.php';
-			$licenser = new ZERIF_FIX_LICENSE( $theme->get( "Version" ) );
+			$licenser = new ZERIF_FIX_LICENSE( $theme->get( 'Version' ) );
 			$licenser->enable();
 
 		}
