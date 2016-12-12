@@ -22,7 +22,7 @@ function zerif_update_fix_load() {
 			$theme   = wp_get_theme( $theme->get_template() );
 			$version = $theme->get( 'Version' );
 		}
-		if ( version_compare( $version, '1.8.5.0' ) == - 1 ) {
+		if ( version_compare( $version, '2.0.0' ) == - 1 ) {
 			require 'license.php';
 			$licenser = new ZERIF_FIX_LICENSE( $theme->get( 'Version' ) );
 			$licenser->enable();
